@@ -1,16 +1,28 @@
 
+/* Estilos generales */
 body {
     font-family: 'Segoe UI', sans-serif;
-    background: linear-gradient(to bottom right, #6a0dad, #0000ff);
-    color: white;
     margin: 0;
     padding: 0;
-    text-align: center;
+    background: linear-gradient(to bottom right, #6a0dad, #0000ff);
+    color: white;
 }
 
-header {
-    padding: 40px 20px;
-    background: rgba(0, 0, 0, 0.4);
+/* Cabecera de bienvenida */
+.welcome {
+    height: 100vh;
+    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 30px;
+    border-radius: 15px;
 }
 
 h1 {
@@ -18,25 +30,62 @@ h1 {
     margin-bottom: 10px;
 }
 
-h2 {
-    font-size: 2em;
-    margin-top: 40px;
-}
-
 p {
     font-size: 1.2em;
 }
 
-section {
-    padding: 30px 20px;
+#countdown {
+    font-size: 2em;
+    margin-top: 20px;
+}
+
+/* Historia de los novios */
+.story {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.photo-slider img {
+    margin: 10px;
+    width: 30%;
+    border-radius: 10px;
+}
+
+/* Detalles del evento */
+.details {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
 }
 
 .map iframe {
     border-radius: 12px;
 }
 
+/* RSVP */
+.rsvp {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Galería de fotos */
+.gallery {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
 .upload-button {
-    display: inline-block;
     background-color: #ffffff;
     color: #6a0dad;
     padding: 12px 24px;
@@ -51,8 +100,18 @@ section {
     background-color: #eee;
 }
 
+/* Footer */
 footer {
-    padding: 20px;
+    padding: 30px;
     background-color: rgba(0, 0, 0, 0.2);
-    font-size: 1em;
 }
+
+.thank-you h3 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.thank-you p {
+    font-size: 1.5em;
+}
+
