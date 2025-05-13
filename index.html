@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fran & María - Nuestra Boda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="welcome">
+        <div class="overlay">
+            <h1>Fran & María</h1>
+            <p>¡Estamos emocionados de compartir este día tan especial contigo!</p>
+            <div id="countdown"></div>
+        </div>
+    </header>
+
+    <section class="story">
+        <h2>Cómo Nos Conocimos</h2>
+        <p>Nos conocimos hace X años, cuando… (escribe la historia aquí)</p>
+        <div class="photo-slider">
+            <img src="https://via.placeholder.com/300" alt="foto1">
+            <img src="https://via.placeholder.com/300" alt="foto2">
+            <img src="https://via.placeholder.com/300" alt="foto3">
+        </div>
+    </section>
+
+    <section class="details">
+        <h2>Detalles del Evento</h2>
+        <p>12 de junio de 2026 - Córdoba</p>
+        <p>La ceremonia será a las 16:00, seguida por una fiesta a las 19:00</p>
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="rsvp">
+        <h2>Confirma Tu Asistencia</h2>
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetEYcod-kQxntNl5AUN8LmC_Gymn4KsLgugfJ4w4nQK52BCQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </section>
+
+    <section class="gallery">
+        <h2>Galería de Fotos</h2>
+        <p>Comparte tus fotos con nosotros para que todos podamos recordar este día.</p>
+        <a href="https://drive.google.com/drive/folders/1Y2nBFo6937Rpg5lYlsSNp9azriEXlzkE?usp=sharing" target="_blank" class="upload-button">Subir fotos</a>
+    </section>
+
+    <footer>
+        <div class="thank-you">
+            <h3>¡Gracias por acompañarnos!</h3>
+            <p>Fran & María 💜</p>
+        </div>
+    </footer>
+
+    <script>
+        // Cuenta regresiva
+        const countdown = document.getElementById("countdown");
+        const weddingDate = new Date("2026-06-12T00:00:00").getTime();
+        const timer = setInterval(function() {
+            const now = new Date().getTime();
+            const distance = weddingDate - now;
+            if (distance < 0) {
+                clearInterval(timer);
+                countdown.innerHTML = "¡Ya llegó el gran día!";
+                return;
+            }
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            countdown.innerHTML = `Faltan ${days}d ${hours}h ${minutes}m ${seconds}s`;
+        }, 1000);
+    </script>
+</body>
+</html>
