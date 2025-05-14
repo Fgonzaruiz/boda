@@ -1,54 +1,53 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirma tu Asistencia</title>
+    <title>Confirmar Asistencia</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="navbar">
-            <div class="logo">F + M</div>
-            <ul class="nav-links">
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="asistencia.html" class="active">Asistencia</a></li>
-                <li><a href="codigo.html">Código de Vestimenta</a></li>
-                <li><a href="playlist.html">Playlist</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo">F + M</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="asistencia.html">Asistencia</a></li>
+            <li><a href="vestimenta.html">Código de Vestimenta</a></li>
+            <li><a href="playlist.html">Playlist</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
 
-    <main class="main-section">
-        <section class="form-section">
-            <h1>Confirma tu Asistencia</h1>
-            <p>Por favor, rellena este formulario para confirmar tu presencia en nuestra boda.</p>
-            <form action="https://formspree.io/f/xpwdogyb" method="POST" class="rsvp-form">
-                <label for="name">Nombre Completo:</label>
-                <input type="text" id="name" name="name" required>
+    <section class="hero" style="background: url('fondo-asistencia.jpg') no-repeat center center/cover;">
+        <div class="overlay">
+            <div class="hero-content">
+                <h1>¡Confirma tu Asistencia!</h1>
+                <p>Queremos celebrar este día tan especial contigo. Por favor, completa el siguiente formulario:</p>
+            </div>
+        </div>
+    </section>
 
-                <label for="asistencia">¿Asistirás?</label>
-                <select id="asistencia" name="asistencia" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Sí">Sí</option>
-                    <option value="No">No</option>
+    <section style="padding: 2rem; max-width: 700px; margin: auto;">
+        <form action="https://formspree.io/f/xpwdogyb" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
+            <label>Nombre completo:
+                <input type="text" name="nombre" required style="padding: 0.5rem; width: 100%;">
+            </label>
+            <label>¿Asistirás?
+                <select name="asistencia" required style="padding: 0.5rem; width: 100%;">
+                    <option value="sí">Sí</option>
+                    <option value="no">No</option>
                 </select>
-
-                <label for="alojamiento">¿Te quedarás a dormir?</label>
-                <select id="alojamiento" name="alojamiento" required>
-                    <option value="">Selecciona una opción</option>
-                    <option value="Sí">Sí</option>
-                    <option value="No">No</option>
+            </label>
+            <label>¿Te quedarás a dormir?
+                <select name="dormir" required style="padding: 0.5rem; width: 100%;">
+                    <option value="sí">Sí</option>
+                    <option value="no">No</option>
                 </select>
-
-                <label for="alergias">¿Tienes alguna alergia o necesidad especial?</label>
-                <textarea id="alergias" name="alergias" rows="4" placeholder="Escríbelo aquí..."></textarea>
-
-                <button type="submit">Enviar Confirmación</button>
-            </form>
-        </section>
-    </main>
+            </label>
+            <label>Alergias o restricciones alimentarias:
+                <input type="text" name="alergias" style="padding: 0.5rem; width: 100%;">
+            </label>
+            <button type="submit" style="padding: 0.75rem; background: #6a00f4; color: white; border: none; font-weight: bold;">Enviar</button>
+        </form>
+    </section>
 </body>
 </html>
