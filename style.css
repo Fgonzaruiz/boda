@@ -235,6 +235,77 @@ body, html {
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
 
+.playlist-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.playlist-left, .playlist-right {
+    flex: 1 1 400px;
+    min-width: 300px;
+}
+
+.spotify-button {
+    margin-top: 1rem;
+}
+
+.spotify-button a {
+    display: inline-block;
+    padding: 0.8rem 1.2rem;
+    background: #1DB954;
+    color: white;
+    font-weight: bold;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.spotify-button a:hover {
+    background: #1aa34a;
+}
+
+.form-sugerencia {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1rem;
+}
+
+.form-sugerencia input {
+    padding: 0.6rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+}
+
+.form-sugerencia button {
+    padding: 0.8rem;
+    background: linear-gradient(to right, #6a00f4, #007bff);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease;
+}
+
+.form-sugerencia button:hover {
+    background: linear-gradient(to right, #007bff, #6a00f4);
+}
+
+.playlist-right img {
+    margin-top: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 0 12px rgba(0,0,0,0.1);
+}
+
+
 .hero-contacto {
     background: url('https://images.unsplash.com/photo-1520975917684-d8a1dc4fdc67?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
     height: 60vh;
