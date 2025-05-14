@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+:root {
+  --purple: #6a0dad;
+  --blue:   #1e90ff;
+  --dark:   #1a1a1a;
+  --light:  #f7f7f7;
+  --white:  #ffffff;
+  --accent: #8f00ff;
+}
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Base */
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--white);
+  color: var(--dark);
+  line-height: 1.6;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .3s;
+}
+a:hover {
+  color: var(--blue);
+}
+
+/* Header y nav */
+header {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  text-align: center;
+}
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+}
+nav ul {
+  list-style: none;
+  display: inline-flex;
+  gap: 1.5rem;
+  margin-top: .5rem;
+}
+nav a {
+  color: var(--white);
+  font-weight: 500;
+  position: relative;
+  padding: .25rem;
+}
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width .3s;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: var(--light);
+}
+.hero .texto {
+  flex: 1;
+  max-width: 500px;
+}
+.hero h1 {
+  font-size: 2.5rem;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+.hero .imagen {
+  flex: 1;
+  text-align: center;
+}
+.hero .imagen img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Quitar viñetas */
+ul {
+  list-style: none;
+}

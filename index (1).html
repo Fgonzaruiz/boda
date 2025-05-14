@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Francisco & María | Nuestra Boda</title>
+  <!-- Enlaza tu CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Encabezado y Navegación -->
+  <header>
+    <div class="logo">F + M</div>
+    <nav>
+      <ul>
+        <li><a href="#bienvenidos">¡Bienvenidos!</a></li>
+        <li><a href="#blog">Blog de Boda</a></li>
+        <li><a href="#rsvp">Confirma tu Asistencia</a></li>
+        <li><a href="#vestimenta">Código de Vestimenta</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección ¡Bienvenidos! -->
+  <section id="bienvenidos" class="hero">
+    <div class="texto">
+      <h1>¡Bienvenidos a Nuestra Boda!</h1>
+      <p>Soy Francisco José y ella es María del Carmen. Nos casamos el <strong>12 de Junio de 2026</strong>.</p>
+      <div id="countdown">
+        <div><span id="dias"></span><small>Días</small></div>
+        <div><span id="horas"></span><small>Horas</small></div>
+        <div><span id="minutos"></span><small>Minutos</small></div>
+        <div><span id="segundos"></span><small>Segundos</small></div>
+      </div>
+    </div>
+    <div class="imagen">
+      <!-- Pon aquí tu foto especial -->
+      <img src="ruta/a/tu-foto.jpg" alt="Foto de la pareja" />
+    </div>
+  </section>
+
+  <!-- Blog de Boda -->
+  <section id="blog">
+    <h2>Blog de Boda</h2>
+    <article class="post">
+      <h3>Cómo nos conocimos</h3>
+      <p>Próximamente...</p>
+    </article>
+  </section>
+
+  <!-- Confirma tu Asistencia -->
+  <section id="rsvp">
+    <h2>Confirma tu Asistencia</h2>
+    <form action="https://formsubmit.co/tu-email@ejemplo.com" method="POST">
+      <label>
+        Nombre completo
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        ¿Asistes?
+        <select name="asiste" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+      <label>
+        ¿Te quedas a dormir?
+        <select name="quiere_hospedaje" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+      <label>
+        Alergias o necesidades especiales
+        <textarea name="alergias" rows="2"></textarea>
+      </label>
+      <input type="hidden" name="_next" value="https://tu-dominio/agradecimiento.html">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Enviar RSVP</button>
+    </form>
+  </section>
+
+  <!-- Código de Vestimenta -->
+  <section id="vestimenta">
+    <h2>Código de Vestimenta</h2>
+    <p>En breve detallaremos nuestro dress code. ¡Mantente atento!</p>
+  </section>
+
+  <!-- Playlist colaborativa -->
+  <section id="playlist">
+    <h2>Playlist de la Boda</h2>
+    <iframe
+      src="https://open.spotify.com/embed/playlist/TU_PLAYLIST"
+      width="100%"
+      height="380"
+      frameborder="0"
+      allow="encrypted-media"
+    ></iframe>
+    <p>¿Tienes una canción techno/anime que no puede faltar? Añádela a la playlist colaborativa.</p>
+  </section>
+
+  <!-- Contáctanos -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <ul>
+      <li>Email: <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/123456789">+34 123 456 789</a></li>
+    </ul>
+    <div class="mapa">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=TU_MAPS_EMBED"
+        width="100%"
+        height="300"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Script para cuenta regresiva -->
+  <script>
+    const fechaBoda = new Date("June 12, 2026 00:00:00").getTime();
+    const cuenta = setInterval(() => {
+      const ahora = Date.now();
+      const distancia = fechaBoda - ahora;
+      if (distancia < 0) {
+        clearInterval(cuenta);
+        document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+        return;
+      }
+      const d = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((distancia / (1000 * 60)) % 60);
+      const s = Math.floor((distancia / 1000) % 60);
+      document.getElementById("dias").textContent = d;
+      document.getElementById("horas").textContent = h;
+      document.getElementById("minutos").textContent = m;
+      document.getElementById("segundos").textContent = s;
+    }, 1000);
+  </script>
+</body>
+</html>
