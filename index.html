@@ -1,76 +1,151 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fran & María - Nuestra Boda</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Francisco & María | Nuestra Boda</title>
+  <!-- Enlaza tu CSS -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header class="welcome">
-        <div class="overlay">
-            <h1>Fran & María</h1>
-            <p>¡Estamos emocionados de compartir este día tan especial contigo!</p>
-            <div id="countdown"></div>
-        </div>
-    </header>
+  <!-- Encabezado y Navegación -->
+  <header>
+    <div class="logo">F + M</div>
+    <nav>
+      <ul>
+        <li><a href="#bienvenidos">¡Bienvenidos!</a></li>
+        <li><a href="#blog">Blog de Boda</a></li>
+        <li><a href="#rsvp">Confirma tu Asistencia</a></li>
+        <li><a href="#vestimenta">Código de Vestimenta</a></li>
+        <li><a href="#playlist">Playlist</a></li>
+        <li><a href="#contacto">Contáctanos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section class="story">
-        <h2>Cómo Nos Conocimos</h2>
-        <p>Nos conocimos hace X años, cuando… (escribe la historia aquí)</p>
-        <div class="photo-slider">
-            <img src="https://via.placeholder.com/300" alt="foto1">
-            <img src="https://via.placeholder.com/300" alt="foto2">
-            <img src="https://via.placeholder.com/300" alt="foto3">
-        </div>
-    </section>
+  <!-- Sección ¡Bienvenidos! -->
+  <section id="bienvenidos" class="hero">
+    <div class="texto">
+      <h1>¡Bienvenidos a Nuestra Boda!</h1>
+      <p>Soy Francisco José y ella es María del Carmen. Nos casamos el <strong>12 de Junio de 2026</strong>.</p>
+      <div id="countdown">
+        <div><span id="dias"></span><small>Días</small></div>
+        <div><span id="horas"></span><small>Horas</small></div>
+        <div><span id="minutos"></span><small>Minutos</small></div>
+        <div><span id="segundos"></span><small>Segundos</small></div>
+      </div>
+    </div>
+    <div class="imagen">
+      <!-- Pon aquí tu foto especial -->
+      <img src="ruta/a/tu-foto.jpg" alt="Foto de la pareja" />
+    </div>
+  </section>
 
-    <section class="details">
-        <h2>Detalles del Evento</h2>
-        <p>12 de junio de 2026 - Córdoba</p>
-        <p>La ceremonia será a las 16:00, seguida por una fiesta a las 19:00</p>
-        <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        </div>
-    </section>
+  <!-- Blog de Boda -->
+  <section id="blog">
+    <h2>Blog de Boda</h2>
+    <!-- Aquí irán tus posts contando la historia -->
+    <article class="post">
+      <h3>Cómo nos conocimos</h3>
+      <p>Próximamente...</p>
+    </article>
+  </section>
 
-    <section class="rsvp">
-        <h2>Confirma Tu Asistencia</h2>
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSetEYcod-kQxntNl5AUN8LmC_Gymn4KsLgugfJ4w4nQK52BCQ/viewform?embedded=true" width="100%" height="800" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
-    </section>
+  <!-- Confirma tu Asistencia -->
+  <section id="rsvp">
+    <h2>Confirma tu Asistencia</h2>
+    <form action="https://formsubmit.co/tu-email@ejemplo.com" method="POST">
+      <!-- Remplaza tu-email@ejemplo.com por el tuyo -->
+      <label>
+        Nombre completo
+        <input type="text" name="name" required />
+      </label>
+      <label>
+        ¿Asistes?
+        <select name="asiste" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+      <label>
+        ¿Te quedas a dormir?
+        <select name="quiere_hospedaje" required>
+          <option value="">-- Selecciona --</option>
+          <option value="Sí">Sí</option>
+          <option value="No">No</option>
+        </select>
+      </label>
+      <label>
+        Alergias o necesidades especiales
+        <textarea name="alergias" rows="2"></textarea>
+      </label>
+      <!-- Campos necesarios para FormSubmit -->
+      <input type="hidden" name="_next" value="https://tu-dominio/agradecimiento.html">
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Enviar RSVP</button>
+    </form>
+  </section>
 
-    <section class="gallery">
-        <h2>Galería de Fotos</h2>
-        <p>Comparte tus fotos con nosotros para que todos podamos recordar este día.</p>
-        <a href="https://drive.google.com/drive/folders/1Y2nBFo6937Rpg5lYlsSNp9azriEXlzkE?usp=sharing" target="_blank" class="upload-button">Subir fotos</a>
-    </section>
+  <!-- Código de Vestimenta -->
+  <section id="vestimenta">
+    <h2>Código de Vestimenta</h2>
+    <p>En breve detallaremos nuestro dress code. ¡Mantente atento!</p>
+  </section>
 
-    <footer>
-        <div class="thank-you">
-            <h3>¡Gracias por acompañarnos!</h3>
-            <p>Fran & María 💜</p>
-        </div>
-    </footer>
+  <!-- Playlist colaborativa -->
+  <section id="playlist">
+    <h2>Playlist de la Boda</h2>
+    <!-- Embed de Spotify colaborativo -->
+    <iframe
+      src="https://open.spotify.com/embed/playlist/TU_PLAYLIST"
+      width="100%"
+      height="380"
+      frameborder="0"
+      allow="encrypted-media"
+    ></iframe>
+    <p>¿Tienes una canción techno/anime que no puede faltar? Añádela a la playlist colaborativa.</p>
+  </section>
 
-    <script>
-        // Cuenta regresiva
-        const countdown = document.getElementById("countdown");
-        const weddingDate = new Date("2026-06-12T00:00:00").getTime();
-        const timer = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = weddingDate - now;
-            if (distance < 0) {
-                clearInterval(timer);
-                countdown.innerHTML = "¡Ya llegó el gran día!";
-                return;
-            }
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            countdown.innerHTML = `Faltan ${days}d ${hours}h ${minutes}m ${seconds}s`;
-        }, 1000);
-    </script>
+  <!-- Contáctanos -->
+  <section id="contacto">
+    <h2>Contáctanos</h2>
+    <ul>
+      <li>Email: <a href="mailto:tu-email@ejemplo.com">tu-email@ejemplo.com</a></li>
+      <li>WhatsApp: <a href="https://wa.me/123456789">+34 123 456 789</a></li>
+    </ul>
+    <div class="mapa">
+      <!-- Cuando tengas la dirección, incrusta Google Maps -->
+      <iframe
+        src="https://www.google.com/maps/embed?pb=TU_MAPS_EMBED"
+        width="100%"
+        height="300"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+    </div>
+  </section>
+
+  <!-- Script para cuenta regresiva -->
+  <script>
+    const fechaBoda = new Date("June 12, 2026 00:00:00").getTime();
+    const cuenta = setInterval(() => {
+      const ahora = Date.now();
+      const distancia = fechaBoda - ahora;
+      if (distancia < 0) {
+        clearInterval(cuenta);
+        document.getElementById("countdown").innerHTML = "¡Es el gran día!";
+        return;
+      }
+      const d = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const h = Math.floor((distancia / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((distancia / (1000 * 60)) % 60);
+      const s = Math.floor((distancia / 1000) % 60);
+      document.getElementById("dias").textContent = d;
+      document.getElementById("horas").textContent = h;
+      document.getElementById("minutos").textContent = m;
+      document.getElementById("segundos").textContent = s;
+    }, 1000);
+  </script>
 </body>
 </html>
