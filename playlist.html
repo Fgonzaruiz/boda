@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,10 +7,10 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header>
+<header class="navbar">
   <div class="logo">F + M</div>
   <nav>
-    <ul>
+    <ul class="nav-links">
       <li><a href="index.html">Inicio</a></li>
       <li><a href="asistencia.html">Asistencia</a></li>
       <li><a href="codigo.html">Código de Vestimenta</a></li>
@@ -20,13 +19,32 @@
     </ul>
   </nav>
 </header>
-<main>
 
-    <section><h2>Playlist de la Boda</h2>
-    <p>Añade tus canciones favoritas a nuestra playlist de techno y anime.</p>
-    <iframe src="https://open.spotify.com/embed/playlist/TU_PLAYLIST" width="100%" height="380" frameborder="0" allow="encrypted-media"></iframe>
-    </section>
-    
+<main>
+  <section class="hero-playlist">
+    <div class="overlay">
+      <div class="hero-content">
+        <h1>Titulo 1</h1>
+        <p>texto 1</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="playlist-info">
+    <div class="text">
+      <h2>Titulo 2</h2>
+      <p>
+        Esta playlist será una inspiración para nuestro DJ, quien se encargará de hacer un set con vuestras canciones favoritas.
+        Podéis escucharla y añadir temas directamente desde Spotify.
+      </p>
+      <p><strong>¡Texto 2!</strong></p>
+    </div>
+
+    <div class="spotify-embed">
+      <iframe src="https://open.spotify.com/embed/playlist/TU_PLAYLIST" width="100%" height="400" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+  </section>
 </main>
+
 </body>
 </html>
