@@ -1,53 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Confirmar Asistencia</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confirmar Asistencia</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <nav class="navbar">
-        <div class="logo">F + M</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="asistencia.html">Asistencia</a></li>
-            <li><a href="codigo.html">Código de Vestimenta</a></li>
-            <li><a href="playlist.html">Playlist</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
-        </ul>
-    </nav>
+<header class="navbar">
+  <div class="logo">F + M</div>
+  <nav>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="asistencia.html">Asistencia</a></li>
+      <li><a href="codigo.html">Código de Vestimenta</a></li>
+      <li><a href="playlist.html">Playlist</a></li>
+      <li><a href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <section class="hero" style="background: url('fondo-asistencia.jpg') no-repeat center center/cover;">
-        <div class="overlay">
-            <div class="hero-content">
-                <h1>¡Confirma tu Asistencia!</h1>
-                <p>Queremos celebrar este día tan especial contigo. Por favor, completa el siguiente formulario:</p>
-            </div>
-        </div>
-    </section>
-
-    <section style="padding: 2rem; max-width: 700px; margin: auto;">
-        <form action="https://formspree.io/f/xpwdogyb" method="POST" style="display: flex; flex-direction: column; gap: 1rem;">
-            <label>Nombre completo:
-                <input type="text" name="nombre" required style="padding: 0.5rem; width: 100%;">
-            </label>
-            <label>¿Asistirás?
-                <select name="asistencia" required style="padding: 0.5rem; width: 100%;">
-                    <option value="sí">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </label>
-            <label>¿Te quedarás a dormir?
-                <select name="dormir" required style="padding: 0.5rem; width: 100%;">
-                    <option value="sí">Sí</option>
-                    <option value="no">No</option>
-                </select>
-            </label>
-            <label>Alergias o restricciones alimentarias:
-                <input type="text" name="alergias" style="padding: 0.5rem; width: 100%;">
-            </label>
-            <button type="submit" style="padding: 0.75rem; background: #6a00f4; color: white; border: none; font-weight: bold;">Enviar</button>
-        </form>
-    </section>
+<main class="form-section">
+  <h2>Confirma tu Asistencia</h2>
+  <p>Queremos celebrar contigo. Por favor, rellena el formulario:</p>
+  <form action="https://formspree.io/f/xpwdogyb" method="POST" class="asistencia-form">
+    <label>Nombre completo
+      <input type="text" name="name" required>
+    </label>
+    <label>¿Asistes?
+      <select name="asiste" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </label>
+    <label>¿Te quedas a dormir?
+      <select name="hospedaje" required>
+        <option value="">-- Selecciona --</option>
+        <option value="Sí">Sí</option>
+        <option value="No">No</option>
+      </select>
+    </label>
+    <label>Alergias
+      <textarea name="alergias" rows="2"></textarea>
+    </label>
+    <button type="submit">Enviar</button>
+  </form>
+</main>
 </body>
 </html>
