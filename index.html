@@ -21,7 +21,29 @@
   </nav>
 </header>
 <main>
-<section><h1>¡Bienvenidos a Nuestra Boda!</h1><p>Nos casamos el 12 de junio de 2026. ¡Gracias por acompañarnos!</p></section>
+
+    <section><h1>¡Bienvenidos a Nuestra Boda!</h1>
+    <p>Nos casamos el <strong>12 de junio de 2026</strong>. ¡Gracias por acompañarnos!</p>
+    <div id="countdown">
+      <div><span id="days">00</span><small>Días</small></div>
+      <div><span id="hours">00</span><small>Horas</small></div>
+      <div><span id="minutes">00</span><small>Minutos</small></div>
+      <div><span id="seconds">00</span><small>Segundos</small></div>
+    </div>
+    <script>
+    const weddingDate = new Date("June 12, 2026 00:00:00").getTime();
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = weddingDate - now;
+      document.getElementById("days").innerText = Math.floor(distance / (1000 * 60 * 60 * 24));
+      document.getElementById("hours").innerText = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      document.getElementById("minutes").innerText = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      document.getElementById("seconds").innerText = Math.floor((distance % (1000 * 60)) / 1000);
+    };
+    setInterval(updateCountdown, 1000);
+    </script>
+    </section>
+    
 </main>
 </body>
 </html>
