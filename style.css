@@ -1,117 +1,246 @@
+/* Importa una tipografía moderna */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
-/* Estilos generales */
+/* Variables de color */
+:root {
+  --purple: #6a0dad;
+  --blue:   #1e90ff;
+  --dark:   #1a1a1a;
+  --light:  #f7f7f7;
+  --white:  #ffffff;
+  --accent: #8f00ff; /* para pequeños detalles */
+}
+
+/* Reset básico */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tipografía y fondo general */
 body {
-    font-family: 'Segoe UI', sans-serif;
-    margin: 0;
-    padding: 0;
-    background: linear-gradient(to bottom right, #6a0dad, #0000ff);
-    color: white;
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--light);
+  color: var(--dark);
+  line-height: 1.6;
 }
 
-/* Cabecera de bienvenida */
-.welcome {
-    height: 100vh;
-    background: url('https://via.placeholder.com/1920x1080') no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    position: relative;
+/* Enlaces */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .3s;
+}
+a:hover {
+  color: var(--blue);
 }
 
-.overlay {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    border-radius: 15px;
+/* Encabezado y navegación */
+header {
+  background: linear-gradient(135deg, var(--purple), var(--blue));
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+header .logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--white);
+  text-align: center;
 }
 
-p {
-    font-size: 1.2em;
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin-top: .5rem;
 }
 
+nav li + li {
+  margin-left: 1.5rem;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 500;
+  font-size: .95rem;
+  position: relative;
+  padding: .25rem;
+}
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--accent);
+  transition: width .3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Sección ¡Bienvenidos! */
+.hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: var(--white);
+}
+
+.hero .texto {
+  flex: 1 1 300px;
+  max-width: 500px;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
+}
+
+.hero p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.hero .imagen {
+  flex: 1 1 300px;
+  text-align: center;
+}
+.hero .imagen img {
+  max-width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Cuenta regresiva */
 #countdown {
-    font-size: 2em;
-    margin-top: 20px;
+  display: flex;
+  gap: 1rem;
+}
+#countdown div {
+  text-align: center;
+  background: rgba(106, 13, 173, .1);
+  padding: .5rem 1rem;
+  border-radius: 6px;
+}
+#countdown span {
+  display: block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--purple);
+}
+#countdown small {
+  font-size: .75rem;
+  color: var(--dark);
 }
 
-/* Historia de los novios */
-.story {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
-    color: #333;
+/* Secciones generales */
+section {
+  padding: 3rem 2rem;
+}
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--purple);
 }
 
-h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
+/* Blog de Boda */
+#blog .post {
+  background: var(--white);
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  margin-top: 1.5rem;
 }
 
-.photo-slider img {
-    margin: 10px;
-    width: 30%;
-    border-radius: 10px;
+/* Formulario RSVP */
+form {
+  max-width: 500px;
+  margin-top: 1rem;
+}
+form label {
+  display: block;
+  margin-bottom: .75rem;
+  font-weight: 500;
+}
+form input[type="text"],
+form select,
+form textarea {
+  width: 100%;
+  padding: .6rem;
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-top: .25rem;
+}
+form textarea {
+  resize: vertical;
+}
+form button {
+  margin-top: 1rem;
+  padding: .7rem 1.2rem;
+  background: var(--purple);
+  color: var(--white);
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background .3s;
+}
+form button:hover {
+  background: var(--accent);
 }
 
-/* Detalles del evento */
-.details {
-    padding: 50px 20px;
-    background-color: #ffffff;
-    text-align: center;
+/* Código de Vestimenta */
+#vestimenta p {
+  font-size: 1rem;
+  color: var(--dark);
 }
 
-.map iframe {
-    border-radius: 12px;
+/* Playlist */
+#playlist iframe {
+  border: none;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-top: 1rem;
 }
 
-/* RSVP */
-.rsvp {
-    padding: 50px 20px;
-    background-color: #f4f4f4;
+/* Contacto */
+#contacto ul {
+  list-style: none;
+  margin-top: 1rem;
+}
+#contacto li + li {
+  margin-top: .5rem;
+}
+#contacto .mapa {
+  margin-top: 1.5rem;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-h2 {
-    margin-bottom: 20px;
+/* Responsive */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-wrap: wrap;
+  }
+  nav li + li {
+    margin-left: 1rem;
+    margin-top: .5rem;
+  }
 }
-
-/* Galería de fotos */
-.gallery {
-    padding: 50px 20px;
-    background-color: #ffffff;
-    text-align: center;
-}
-
-.upload-button {
-    background-color: #ffffff;
-    color: #6a0dad;
-    padding: 12px 24px;
-    margin-top: 20px;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 8px;
-    transition: background 0.3s;
-}
-
-.upload-button:hover {
-    background-color: #eee;
-}
-
-/* Footer */
-footer {
-    padding: 30px;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-
-.thank-you h3 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-}
-
-.thank-you p {
-    font-size: 1.5em;
-}
-
