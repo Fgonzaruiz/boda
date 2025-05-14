@@ -234,3 +234,44 @@ body, html {
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.15);
 }
+
+.hero-contacto {
+    background: url('https://images.unsplash.com/photo-1520975917684-d8a1dc4fdc67?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+}
+
+.contacto-info {
+    max-width: 700px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: #f0f4ff;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.contacto-info h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.contacto-info ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contacto-info li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+.contacto-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contacto-info a:hover {
+    text-decoration: underline;
+}
