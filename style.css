@@ -152,57 +152,53 @@ body, html {
 .asistencia-form button:hover {
     background: linear-gradient(to right, #007bff, #6a00f4);
 }
+.hero-dresscode {
+    background: url('https://images.unsplash.com/photo-1526045612212-70caf35c14df?auto=format&fit=crop&w=1950&q=80') no-repeat center center/cover;
+    height: 60vh;
+    position: relative;
+}
 
-.dresscode-section {
-    max-width: 1000px;
+.dresscode-info {
+    max-width: 900px;
     margin: 3rem auto;
     padding: 2rem;
     text-align: center;
 }
 
-.dresscode-section h2 {
+.dresscode-info h2 {
     font-size: 2rem;
     color: #333;
 }
 
-.intro-text {
-    margin-bottom: 2rem;
+.dresscode-info p {
     font-size: 1.1rem;
+    line-height: 1.8;
     color: #555;
 }
 
-.comic-row {
+.dresscode-gallery {
+    padding: 3rem 2rem;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.dresscode-gallery h3 {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #333;
+}
+
+.dresscode-gallery .gallery {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
     justify-content: center;
-    margin-bottom: 2rem;
+    gap: 2rem;
 }
 
-.comic-box {
-    width: 300px;
-    background: #fdfdfd;
-    border: 3px solid #000;
-    border-radius: 10px;
-    box-shadow: 6px 6px 0 rgba(0,0,0,0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease;
+.dresscode-gallery img {
+    width: 250px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
-
-.comic-box:hover {
-    transform: translateY(-5px);
-}
-
-.comic-box img {
-    width: 100%;
-    display: block;
-}
-
-.comic-box p {
-    padding: 1rem;
-    font-size: 0.95rem;
-    color: #333;
-    line-height: 1.4;
-    text-align: left;
-}
-
