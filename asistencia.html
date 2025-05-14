@@ -2,48 +2,53 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Asistencia</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirma tu Asistencia</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-  <div class="logo">F + M</div>
-  <nav>
-    <ul>
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="asistencia.html">Asistencia</a></li>
-      <li><a href="codigo.html">Código de Vestimenta</a></li>
-      <li><a href="playlist.html">Playlist</a></li>
-      <li><a href="contacto.html">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
-<main>
+    <header class="header">
+        <nav class="navbar">
+            <div class="logo">F + M</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="asistencia.html" class="active">Asistencia</a></li>
+                <li><a href="vestimenta.html">Código de Vestimenta</a></li>
+                <li><a href="playlist.html">Playlist</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <section><h2>Confirma tu Asistencia</h2>
-    <form action="https://formsubmit.co/tu-email@ejemplo.com" method="POST">
-      <label>Nombre completo<input type="text" name="name" required></label>
-      <label>¿Asistes?
-        <select name="asiste" required>
-          <option value="">-- Selecciona --</option>
-          <option value="Sí">Sí</option>
-          <option value="No">No</option>
-        </select>
-      </label>
-      <label>¿Te quedas a dormir?
-        <select name="hospedaje" required>
-          <option value="">-- Selecciona --</option>
-          <option value="Sí">Sí</option>
-          <option value="No">No</option>
-        </select>
-      </label>
-      <label>Alergias<textarea name="alergias" rows="2"></textarea></label>
-      <button type="submit">Enviar</button>
-    </form>
-    </section>
-    
-</main>
+    <main class="main-section">
+        <section class="form-section">
+            <h1>Confirma tu Asistencia</h1>
+            <p>Por favor, rellena este formulario para confirmar tu presencia en nuestra boda.</p>
+            <form action="https://formspree.io/f/xpwdogyb" method="POST" class="rsvp-form">
+                <label for="name">Nombre Completo:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="asistencia">¿Asistirás?</label>
+                <select id="asistencia" name="asistencia" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="alojamiento">¿Te quedarás a dormir?</label>
+                <select id="alojamiento" name="alojamiento" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="Sí">Sí</option>
+                    <option value="No">No</option>
+                </select>
+
+                <label for="alergias">¿Tienes alguna alergia o necesidad especial?</label>
+                <textarea id="alergias" name="alergias" rows="4" placeholder="Escríbelo aquí..."></textarea>
+
+                <button type="submit">Enviar Confirmación</button>
+            </form>
+        </section>
+    </main>
 </body>
 </html>
