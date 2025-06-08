@@ -485,3 +485,40 @@ body, html {
     width: 100%;
   }
 }
+.dresscode-section {
+  padding: 4rem 2rem;
+  background: #f9f3ef;
+}
+
+.dresscode-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.dresscode-container img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.dresscode-text {
+  flex: 1;
+}
+
+.dresscode-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.dresscode-text p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #555;
+}
+
