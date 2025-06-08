@@ -187,7 +187,8 @@ body, html {
     background: linear-gradient(to right, #007bff, #6a00f4);
 }
 .hero-dresscode {
-    background: url('https://i.ibb.co/JRJVjJdZ/1000147834.jpg') no-repeat center center/contain;
+    background: url('https://i.ibb.co/JRJVjJdZ/1000147834.jpg') no-repeat center center;
+    background-size: 80%;
     height: 60vh;
     position: relative;
 }
