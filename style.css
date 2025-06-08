@@ -388,15 +388,6 @@ body, html {
     font-size: 1.5rem;
   }
 
-  .gallery {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .gallery img {
-    width: 90%;
-  }
-
   .playlist-container {
     flex-direction: column;
   }
