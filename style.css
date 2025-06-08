@@ -186,57 +186,6 @@ body, html {
 .asistencia-form button:hover {
     background: linear-gradient(to right, #007bff, #6a00f4);
 }
-.hero-dresscode {
-    background: url('https://i.ibb.co/JRJVjJdZ/1000147834.jpg') no-repeat center center;
-    background-size: 80%;
-    height: 60vh;
-    position: relative;
-}
-
-.dresscode-info {
-    max-width: 900px;
-    margin: 3rem auto;
-    padding: 2rem;
-    text-align: center;
-}
-
-.dresscode-info h2 {
-    font-size: 2rem;
-    color: #333;
-}
-
-.dresscode-info p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #555;
-}
-
-.dresscode-gallery {
-    padding: 3rem 2rem;
-    background: #f7f7f7;
-    text-align: center;
-}
-
-.dresscode-gallery h3 {
-    margin-bottom: 2rem;
-    font-size: 1.8rem;
-    color: #333;
-}
-
-.dresscode-gallery .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 2rem;
-}
-
-.dresscode-gallery img {
-    width: 250px;
-    height: 350px;
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
 
 .hero-playlist {
     background: url('https://i.ibb.co/3yZ2mZsK/1000147834.jpg" alt="1000147834') no-repeat center center/cover;
@@ -457,14 +406,6 @@ body, html {
     min-width: unset;
   }
 
-  .dresscode-gallery .gallery {
-    flex-direction: column;
-  }
-
-  .dresscode-gallery img {
-    width: 80%;
-    height: auto;
-  }
 
   .form-section,
   .contacto-info,
@@ -521,4 +462,5 @@ body, html {
   line-height: 1.7;
   color: #555;
 }
+
 
